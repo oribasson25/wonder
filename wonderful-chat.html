@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wonderful Chat Embed</title>
+</head>
+<body>
+  <h1>Wonderful Chat Embed</h1>
+  <p>Scroll down to see the chat button, or wait for the widget to load.</p>
+
+  <script>
+  (() => {
+    const s = document.createElement('script');
+    s.src = 'https://libra.app.wonderful.ai/embed/wonderful-chat.js';
+    s.onload = () => {
+      new window.WonderfulChat({
+        environment: "libra.api.wonderful.ai",
+        agentId: "15af624e-38b1-48c5-9838-22375ae75c62",
+
+        // Core settings
+        agentName: 'KNOWLEDGE',
+        buttonText: 'Chat with us',
+        placeholderText: 'Type your message...',
+        isRTL: false,
+
+        // Main theme colors
+        primaryColor: '#0066cc',
+        accentColor: '#004d99',
+        textColor: '#333333',
+
+        // Chat appearance
+        headerBgColor: '#0066cc',
+        headerTextColor: '#ffffff',
+
+        // Message bubbles
+        userBubbleColor: '#0066cc',
+        userTextColor: '#ffffff',
+        agentBubbleColor: '#ffffff',
+        agentTextColor: '#333333',
+
+        // Background colors
+        windowBgColor: '#ffffff',
+        messagesBgColor: '#f5f7fb',
+        inputBgColor: '#f5f7fb',
+
+        // Status indicators
+        statusColor: '#4CAF50',
+        errorColor: '#F44336',
+
+        // Optional logo
+        logoUrl: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fa/88/9e/fa889e4b-e4a6-5341-57f0-0116d2f37f57/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png'
+      });
+    };
+    document.head.appendChild(s);
+  })();
+  </script>
+</body>
+</html>
